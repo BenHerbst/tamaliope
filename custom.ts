@@ -28,6 +28,7 @@ namespace tamaliope_creation {
             this.name = name
             this.skin = skin
 
+            basic.showString("Tamaliope")
             basic.forever(function () {
                 if (this.food_need > 80) {
     basic.showLeds(`

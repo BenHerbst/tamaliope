@@ -20,5 +20,5 @@
     "supportedTargets": [
         "calliopemini"
     ],
-    "preferredEditor": "pyprj"
+    "preferredEditor": "tsprj"
 }
