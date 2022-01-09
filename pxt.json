@@ -3,9 +3,7 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "Grove": "github:calliope-edu/pxt-grove#v0.2.7",
-        "devices": "*",
-        "OLED-Display": "github:microbit-grove-library/pxt-oleddisplay#2fa25d60729025180eae06b208eb3195bba3dede"
+        "Grove": "github:calliope-edu/pxt-grove#v0.2.7"
     },
     "files": [
         "main.blocks",

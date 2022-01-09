@@ -28,7 +28,6 @@ namespace tamaliope_creation {
             this.name = name
             this.skin = skin
 
-            basic.showString("Tamaliope")
             basic.forever(function () {
                 if (this.food_need > 80) {
     basic.showLeds(`
@@ -92,7 +91,7 @@ else if (this.food_need > 60) {
                     else if(this.food_need > 50) {
                         this.lvl += (this.food_need - 50) / 50
                     }
-                    _4Digit.show(this.lvl)
+                    _4digit.show(this.lvl)
                 }
             })
         }
