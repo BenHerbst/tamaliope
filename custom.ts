@@ -37,59 +37,13 @@ namespace tamaliope_creation {
             this.skin = skin
 
             basic.forever(function () {
-                if (this.food_need > 80) {
-    basic.showLeds(`
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
-        `)
-} 
-else if (this.food_need > 60) {
-    basic.showLeds(`
-        . . . . .
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
-        `)
-} else if (this.food_need > 40) {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        # # # # #
-        # # # # #
-        # # # # #
-        `)
-} else if (this.food_need > 20) {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        # # # # #
-        # # # # #
-        `)
-} else if (this.food_need > 0) {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        # # # # #
-        `)
-} else if (this.food_need <= 0) {
-    basic.showLeds(`
-        # . . . #
-        . # . # .
-        . . # . .
-        . # . # .
-        # . . . #
-        `)
-}
                 if (control.millis() - this.last_food_need_millis > 3000) {
                     this.last_food_need_millis = control.millis()
                     this.food_need -= 1
+                }
+                if (control.millis() - this.last_drink_need_millis > 1000) {
+                    this.last_drink_need_millis = control.millis()
+                    this.drink_need -= 1
                 }
                 if (control.millis() - this.last_used_millis > 5000) {
                     this.last_used_millis = control.millis()
