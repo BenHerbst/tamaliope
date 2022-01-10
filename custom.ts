@@ -22,7 +22,15 @@ namespace tamaliope_creation {
         lvl: number = 5
         last_used_millis = 0
         last_food_need_millis = 0
-        food_need = 100
+        food_need = 80
+        last_drink_need_millis = 0
+        drink_need = 40
+        last_medicine_need_millis = 0
+        medicine_need = 60
+        last_play_need_millis = 0
+        play_need = 60
+        last_hygiene_need_millis = 0
+        hygiene_need = 24
 
         constructor(name: string, skin: Image) {
             this.name = name
@@ -72,11 +80,11 @@ else if (this.food_need > 60) {
         `)
 } else if (this.food_need <= 0) {
     basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
+        # . . . #
+        . # . # .
+        . . # . .
+        . # . # .
+        # . . . #
         `)
 }
                 if (control.millis() - this.last_food_need_millis > 3000) {
