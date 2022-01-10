@@ -1,19 +1,3 @@
-
-/**
- * Nutze diese Datei für benutzerdefinierte Funktionen und Blöcke.
- * Weitere Informationen unter https://makecode.calliope.cc/blocks/custom
- */
-
-enum MyEnum {
-    //% block="one"
-    One,
-    //% block="two"
-    Two
-}
-
-/**
- * Benutzerdefinierte Blöcke
- */
 //% weight=100 color=#0fbc11 icon=""
 namespace tamaliope_creation {
     export class tamaliope {

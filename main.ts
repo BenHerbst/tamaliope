@@ -1,14 +1,23 @@
 input.onButtonPressed(Button.A, function () {
     if (current_mode == modes.FOOD) {
         current_mode = modes.DRINK
-basic.showString("Drink:")
+        basic.showString("Drink:")
     } else if (current_mode == modes.DRINK) {
+        current_mode = modes.HYGIENE
+        basic.showString("Hygiene:")
+    } else if (current_mode == modes.HYGIENE) {
+        current_mode = modes.MEDICINE
+        basic.showString("Medicine:")
+    } else if (current_mode == modes.MEDICINE) {
+        current_mode = modes.PLAY
+        basic.showString("Play:")
+    } else if (current_mode == modes.PLAY) {
         current_mode = modes.FOOD
-basic.showString("Food:")
+        basic.showString("Food:")
     }
 })
 input.onGesture(Gesture.Shake, function () {
-    basic.showString("Hoer auf zu schuetteln")
+    //basic.showString("Hoer auf zu schuetteln")
 })
 function display_need (need: number) {
     if (need > 80) {
@@ -73,6 +82,7 @@ let _4digit = grove.createDisplay(DigitalPin.C16, DigitalPin.C17)
 _4digit.set(7)
 serial.writeLine("" + (`Welcome to Tamaliope - 0.01
 Write help or info.`))
+basic.showString("Food:")
 let flush = new tamaliope_creation.tamaliope("Floush", images.createImage(`
 . # # # .
 # . . . #
@@ -87,6 +97,15 @@ basic.forever(function () {
             break
         case modes.DRINK:
             display_need(flush.drink_need)
+            break
+        case modes.HYGIENE:
+            display_need(flush.hygiene_need)
+            break
+        case modes.MEDICINE:
+            display_need(flush.medicine_need)
+            break
+        case modes.PLAY:
+            display_need(flush.play_need)
             break
     }
 })
