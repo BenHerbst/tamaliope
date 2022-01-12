@@ -1,4 +1,4 @@
-/* class tamaliope {
+class tamaliope {
     name: string
     lvl: number = 5
     last_used_millis = 0
@@ -124,10 +124,8 @@ enum modes {
 let current_mode = modes.FOOD
 let _4digit = grove.createDisplay(DigitalPin.C16, DigitalPin.C17)
 _4digit.set(7)
-*/
 oled96.initDisplay()
 oled96.writeString("TEEEEEEST")
-/*
 serial.writeLine("" + (`Welcome to Tamaliope - 0.01
 Write help or info.`))
 let flush = new tamaliope("Floush")
@@ -184,4 +182,3 @@ basic.forever(function () {
             break
     }
 })
-*/
