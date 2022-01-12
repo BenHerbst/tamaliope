@@ -7,8 +7,7 @@
     },
     "files": [
         "main.ts",
-        "README.md",
-        "custom.ts"
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
