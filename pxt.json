@@ -3,7 +3,6 @@
     "description": "Virtual pet for calliope mini",
     "dependencies": {
         "core": "*",
-        "Grove": "github:calliope-edu/pxt-grove#v0.2.7",
         "calliope-oled96": "github:banbury/pxt-calliope-oled96#704e2aef6aea44343fa0cb038f068e2e9a949267"
     },
     "files": [
